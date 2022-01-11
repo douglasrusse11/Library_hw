@@ -41,4 +41,14 @@ public class LibraryTest {
         library.addBook(book4);
         assertEquals(3, library.getNumberOfBooks());
     }
+
+    @Test
+    public void hasTwoSciFiOneHorrorBook() {
+        library.addBook(book1);
+        library.addBook(book2);
+        library.addBook(book4);
+        assertEquals(2, library.numberOfBooksByGenre("Science Fiction"));
+        assertEquals(1, library.numberOfBooksByGenre("Horror"));
+    }
+
 }
