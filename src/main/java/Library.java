@@ -29,4 +29,7 @@ public class Library {
     }
 
 
+    public boolean removeBook(Book book) {
+        return this.books.remove(book);
+    }
 }
